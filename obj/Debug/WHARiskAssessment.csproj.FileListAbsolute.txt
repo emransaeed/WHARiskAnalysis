@@ -1,0 +1,12 @@
+C:\Data\Imran\GitHub\WHARiskAssessment\bin\Debug\WHARiskAssessment.exe.config
+C:\Data\Imran\GitHub\WHARiskAssessment\bin\Debug\WHARiskAssessment.exe
+C:\Data\Imran\GitHub\WHARiskAssessment\bin\Debug\WHARiskAssessment.pdb
+C:\Data\Imran\GitHub\WHARiskAssessment\obj\Debug\WHARiskAssessment.csprojResolveAssemblyReference.cache
+C:\Data\Imran\GitHub\WHARiskAssessment\obj\Debug\WHAInsuranceAssessment.frmRiskAssessment.resources
+C:\Data\Imran\GitHub\WHARiskAssessment\obj\Debug\WHARiskAssessment.Properties.Resources.resources
+C:\Data\Imran\GitHub\WHARiskAssessment\obj\Debug\WHARiskAssessment.csproj.GenerateResource.Cache
+C:\Data\Imran\GitHub\WHARiskAssessment\obj\Debug\WHARiskAssessment.exe
+C:\Data\Imran\GitHub\WHARiskAssessment\obj\Debug\WHARiskAssessment.pdb
+C:\Data\Imran\GitHub\WHARiskAnalysis\bin\Debug\WHARiskAssessment.exe.config
+C:\Data\Imran\GitHub\WHARiskAnalysis\obj\Debug\WHARiskAssessment.exe
+C:\Data\Imran\GitHub\WHARiskAnalysis\obj\Debug\WHARiskAssessment.pdb

@@ -1,0 +1,10 @@
+C:\Data\Imran\GitHub\WHAInsuranceAssessment\WHAInsuranceAssessment\bin\Debug\WHAInsuranceAssessment.exe.config
+C:\Data\Imran\GitHub\WHAInsuranceAssessment\bin\Debug\WHAInsuranceAssessment.exe.config
+C:\Data\Imran\GitHub\WHAInsuranceAssessment\obj\Debug\WHAInsuranceAssessment.csprojResolveAssemblyReference.cache
+C:\Data\Imran\GitHub\WHAInsuranceAssessment\obj\Debug\WHAInsuranceAssessment.frmRiskAssessment.resources
+C:\Data\Imran\GitHub\WHAInsuranceAssessment\obj\Debug\WHAInsuranceAssessment.Properties.Resources.resources
+C:\Data\Imran\GitHub\WHAInsuranceAssessment\obj\Debug\WHAInsuranceAssessment.csproj.GenerateResource.Cache
+C:\Data\Imran\GitHub\WHAInsuranceAssessment\bin\Debug\WHAInsuranceAssessment.exe
+C:\Data\Imran\GitHub\WHAInsuranceAssessment\bin\Debug\WHAInsuranceAssessment.pdb
+C:\Data\Imran\GitHub\WHAInsuranceAssessment\obj\Debug\WHAInsuranceAssessment.exe
+C:\Data\Imran\GitHub\WHAInsuranceAssessment\obj\Debug\WHAInsuranceAssessment.pdb
