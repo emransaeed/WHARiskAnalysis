@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WHAInsuranceAssessment.Properties
+namespace WHARiskAnalysis.Properties
 {
 
 

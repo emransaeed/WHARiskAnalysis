@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WHAInsuranceAssessment.BettingData;
-using WHAInsuranceAssessment.Entities;
+using WHARiskAnalysis.BettingData;
+using WHARiskAnalysis.Entities;
 
-namespace WHAInsuranceAssessment
+namespace WHARiskAnalysis
 {
     public partial class frmRiskAnalysis : Form
     {
@@ -19,18 +19,37 @@ namespace WHAInsuranceAssessment
             InitializeComponent();
         }
 
-        IList<Bet> SettledBets = new List<Bet>();
-        IList<Bet> UnsettledBets = new List<Bet>();
+        private IList<Bet> SettledBets { get; set; }
+        private IList<Bet> UnsettledBets { get; set; }
 
         private void frmRiskAssessment_Load(object sender, EventArgs e)
         {
-            LoadBets();
+            //SettledBets = new List<Bet>();
+            //UnsettledBets = new List<Bet>();
+
+            LoadBetsData();
+            AnalyzeAndShowBets();
         }
 
-        private void LoadBets()
+        private void LoadBetsData()
         {
-            SettledBets = BettingDataManager.GetBets("BettingData/Settled.csv");
-            UnsettledBets = BettingDataManager.GetBets("BettingData/Unsettled.csv");
+            BetsDataManager betsDataManager = new BetsDataManager();
+            SettledBets = betsDataManager.GetBets("BettingData/Settled.csv");
+            UnsettledBets = betsDataManager.GetBets("BettingData/Unsettled.csv");
+        }
+
+        private void AnalyzeAndShowBets()
+        {
+            BetsAnalyzer betsAnalyzer = new BetsAnalyzer();
+            var customersWithStatistics = betsAnalyzer.GetCustomersStatistics(SettledBets);
+            var unUsualCustomers = betsAnalyzer.FindUnusualCustomers(customersWithStatistics);
+            var riskyBets = betsAnalyzer.FindRiskyBets(unUsualCustomers, UnsettledBets);
+            var unUsualBets = betsAnalyzer.FindUnusualBets(customersWithStatistics, UnsettledBets);
+            var highlyUnusualBets = betsAnalyzer.FindHighlyUnusualBets(customersWithStatistics, UnsettledBets);
+            var unusualWinningBets = betsAnalyzer.FindUnusualWinningBets(UnsettledBets);
+
+            gridUnusualCustomers.DataSource = unUsualCustomers;
+            gridRiskyBets.DataSource = riskyBets;
         }
     }
 }

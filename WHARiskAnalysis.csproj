@@ -45,8 +45,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BettingDataManager\BettingDataManager.cs" />
+    <Compile Include="BetsAnalyzer\BetsAnalyzer.cs" />
+    <Compile Include="BetsDataManager\BetsDataManager.cs" />
     <Compile Include="Entities\Bet.cs" />
+    <Compile Include="Entities\Customer.cs" />
     <Compile Include="frmRiskAnalysis.cs">
       <SubType>Form</SubType>
     </Compile>

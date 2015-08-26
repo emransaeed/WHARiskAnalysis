@@ -4,22 +4,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WHAInsuranceAssessment.Entities
+namespace WHARiskAnalysis.Entities
 {
     public class Bet
     {
-        public Bet(int customer, int eventCode, int participant, int stake, int win)
+        public Bet(int customerCode, int eventCode, int participantCode, int stake, int win)
         {
-            Customer = customer;
+            CustomerCode = customerCode;
             EventCode = eventCode;
-            Participant = participant;
+            ParticipantCode = participantCode;
             Stake = stake;
             Win = win;
         }
 
-        public int Customer { get; set; }
+        public int CustomerCode { get; set; }
         public int EventCode { get; set; }
-        public int Participant { get; set; }
+        public int ParticipantCode { get; set; }
         public int Stake { get; set; }
         public int Win { get; set; }
     }

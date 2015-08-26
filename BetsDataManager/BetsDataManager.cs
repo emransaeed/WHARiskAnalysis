@@ -4,13 +4,13 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WHAInsuranceAssessment.Entities;
+using WHARiskAnalysis.Entities;
 
-namespace WHAInsuranceAssessment.BettingData
+namespace WHARiskAnalysis.BettingData
 {
-    public static class BettingDataManager
+    public class BetsDataManager
     {
-        public static IList<Bet> GetBets(string fileNameAndPath)
+        public IList<Bet> GetBets(string fileNameAndPath)
         {
             var bets = new List<Bet>();
             using (var sr = new StreamReader(fileNameAndPath))
