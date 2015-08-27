@@ -6,9 +6,9 @@ using System.Text;
 using System.Threading.Tasks;
 using WHARiskAnalysis.Entities;
 
-namespace WHARiskAnalysis.BettingData
+namespace WHARiskAnalysis.BettingDataManager
 {
-    public class BetsDataManager
+    public class BetsDataManager : IBetsDataManager
     {
         public IList<Bet> GetBets(string fileNameAndPath)
         {

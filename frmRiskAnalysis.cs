@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using WHARiskAnalysis.BettingData;
+using WHARiskAnalysis.BettingAnalyzer;
+using WHARiskAnalysis.BettingDataManager;
 using WHARiskAnalysis.Entities;
 
 namespace WHARiskAnalysis
@@ -24,23 +25,27 @@ namespace WHARiskAnalysis
 
         private void frmRiskAssessment_Load(object sender, EventArgs e)
         {
-            //SettledBets = new List<Bet>();
-            //UnsettledBets = new List<Bet>();
-
-            LoadBetsData();
-            AnalyzeAndShowBets();
+            try
+            {
+                LoadBetsData();
+                AnalyzeAndShowBets();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Exception occurred: " + ex.Message);
+            }
         }
 
         private void LoadBetsData()
         {
-            BetsDataManager betsDataManager = new BetsDataManager();
+            IBetsDataManager betsDataManager = new BetsDataManager();
             SettledBets = betsDataManager.GetBets("BettingData/Settled.csv");
             UnsettledBets = betsDataManager.GetBets("BettingData/Unsettled.csv");
         }
 
         private void AnalyzeAndShowBets()
         {
-            BetsAnalyzer betsAnalyzer = new BetsAnalyzer();
+            IBetsAnalyzer betsAnalyzer = new BetsAnalyzer();
             var customersWithStatistics = betsAnalyzer.GetCustomersStatistics(SettledBets);
             var unUsualCustomers = betsAnalyzer.FindUnusualCustomers(customersWithStatistics);
             var riskyBets = betsAnalyzer.FindRiskyBets(unUsualCustomers, UnsettledBets);
@@ -50,6 +55,12 @@ namespace WHARiskAnalysis
 
             gridUnusualCustomers.DataSource = unUsualCustomers;
             gridRiskyBets.DataSource = riskyBets;
+            gridUsualBets.DataSource = unUsualBets;
+            gridHighlyUnusualBets.DataSource = highlyUnusualBets;
+            gridUnusualWinningBets.DataSource = unusualWinningBets;
+            gridAllCustomers.DataSource = customersWithStatistics;
+            gridAllSettledBets.DataSource = SettledBets;
+            gridAllUnsettledBets.DataSource = UnsettledBets;
         }
     }
 }
