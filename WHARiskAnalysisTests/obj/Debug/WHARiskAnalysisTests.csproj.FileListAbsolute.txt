@@ -1,0 +1,7 @@
+C:\Data\Imran\GitHub\WHARiskAnalysis\WHARiskAnalysisTests\bin\Debug\WHARiskAnalysisTests.dll
+C:\Data\Imran\GitHub\WHARiskAnalysis\WHARiskAnalysisTests\bin\Debug\WHARiskAnalysisTests.pdb
+C:\Data\Imran\GitHub\WHARiskAnalysis\WHARiskAnalysisTests\bin\Debug\WHARiskAssessment.exe
+C:\Data\Imran\GitHub\WHARiskAnalysis\WHARiskAnalysisTests\bin\Debug\WHARiskAssessment.pdb
+C:\Data\Imran\GitHub\WHARiskAnalysis\WHARiskAnalysisTests\obj\Debug\WHARiskAnalysisTests.csprojResolveAssemblyReference.cache
+C:\Data\Imran\GitHub\WHARiskAnalysis\WHARiskAnalysisTests\obj\Debug\WHARiskAnalysisTests.dll
+C:\Data\Imran\GitHub\WHARiskAnalysis\WHARiskAnalysisTests\obj\Debug\WHARiskAnalysisTests.pdb
