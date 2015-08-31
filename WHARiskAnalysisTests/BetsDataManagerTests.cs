@@ -13,7 +13,7 @@ namespace WHARiskAnalysisTests
         public void Test_GetBets()
         {
             IBetsDataManager betsDataManager = new BetsDataManager();
-            var bets = betsDataManager.GetBets(fileName);
+            var bets = betsDataManager.ReadBetsFromFile(fileName);
             Assert.AreEqual(bets.Count, 50);
         }
     }

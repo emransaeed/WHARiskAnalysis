@@ -39,8 +39,8 @@ namespace WHARiskAnalysis
         private void LoadBetsData()
         {
             IBetsDataManager betsDataManager = new BetsDataManager();
-            SettledBets = betsDataManager.GetBets("BettingData/Settled.csv");
-            UnsettledBets = betsDataManager.GetBets("BettingData/Unsettled.csv");
+            SettledBets = betsDataManager.ReadBetsFromFile("BettingData/Settled.csv");
+            UnsettledBets = betsDataManager.ReadBetsFromFile("BettingData/Unsettled.csv");
         }
 
         private void AnalyzeAndShowBets()

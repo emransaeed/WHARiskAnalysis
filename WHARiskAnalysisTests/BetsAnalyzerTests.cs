@@ -16,6 +16,11 @@ namespace WHARiskAnalysisTests
         private IList<Customer> customers;
         private IList<Customer> unusualCustomers;
 
+        public BetsAnalyzerTests()
+        {
+            Setup();
+        }
+
         private void Setup()
         {
             settledBets = new List<Bet>();
@@ -38,8 +43,6 @@ namespace WHARiskAnalysisTests
         [TestMethod]
         public void Test_GetCustomersStatistics()
         {
-            Setup();
-
             IBetsAnalyzer betsAnalyzer = new BetsAnalyzer();
             var customers = betsAnalyzer.GetCustomersStatistics(settledBets);
             Assert.AreEqual(customers.Count, 2);
@@ -48,8 +51,6 @@ namespace WHARiskAnalysisTests
         [TestMethod]
         public void Test_FindUnusualCustomers()
         {
-            Setup();
-
             IBetsAnalyzer betsAnalyzer = new BetsAnalyzer();
             var unusualCustomers = betsAnalyzer.FindUnusualCustomers(customers);
             Assert.AreEqual(unusualCustomers.Count, 1);
@@ -58,8 +59,6 @@ namespace WHARiskAnalysisTests
         [TestMethod]
         public void Test_FindRiskyBets()
         {
-            Setup();
-
             IBetsAnalyzer betsAnalyzer = new BetsAnalyzer();
             var riskyBets = betsAnalyzer.FindRiskyBets(unusualCustomers, unsettledBets);
             Assert.AreEqual(riskyBets.Count, 1);
@@ -68,8 +67,6 @@ namespace WHARiskAnalysisTests
         [TestMethod]
         public void Test_FindUnusualBets()
         {
-            Setup();
-
             IBetsAnalyzer betsAnalyzer = new BetsAnalyzer();
             var unusualBets = betsAnalyzer.FindUnusualBets(customers, unsettledBets);
             Assert.AreEqual(unusualBets.Count, 0);
@@ -78,8 +75,6 @@ namespace WHARiskAnalysisTests
         [TestMethod]
         public void Test_FindHighlyUnusualBets()
         {
-            Setup();
-
             IBetsAnalyzer betsAnalyzer = new BetsAnalyzer();
             var highllyUnusualBets = betsAnalyzer.FindHighlyUnusualBets(customers, unsettledBets);
             Assert.AreEqual(highllyUnusualBets.Count, 0);
@@ -88,8 +83,6 @@ namespace WHARiskAnalysisTests
         [TestMethod]
         public void Test_FindUnusualWinningBets()
         {
-            Setup();
-
             IBetsAnalyzer betsAnalyzer = new BetsAnalyzer();
             var highllyUnusualBets = betsAnalyzer.FindUnusualWinningBets(unsettledBets);
             Assert.AreEqual(highllyUnusualBets.Count, 1);

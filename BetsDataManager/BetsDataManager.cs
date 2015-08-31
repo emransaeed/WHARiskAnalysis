@@ -8,17 +8,23 @@ using WHARiskAnalysis.Entities;
 
 namespace WHARiskAnalysis.BettingDataManager
 {
+    //Data manager to read bets from csv file
     public class BetsDataManager : IBetsDataManager
     {
-        public IList<Bet> GetBets(string fileNameAndPath)
+        //Read bets from a csv file into list
+        //Columns of file are: CustomerCode, EventCode, ParticipantCode, Stake, Win
+        public IList<Bet> ReadBetsFromFile(string fileNameAndPath)
         {
             var bets = new List<Bet>();
-            using (var sr = new StreamReader(fileNameAndPath))
+            
+            //Open stream reader on file
+            using (var streamReader = new StreamReader(fileNameAndPath))
             {
-                foreach(string line in sr.ReadToEnd().Split('\n').Where(l => !string.IsNullOrEmpty(l)))
+                //Loop through all lines of file and add them to bets list
+                foreach (string line in streamReader.ReadToEnd().Split('\n').Where(line => !string.IsNullOrEmpty(line)))
                 {
-                    var betArray = line.Split(',').Select(x => int.Parse(x)).ToArray<int>();
-                    bets.Add(new Bet(betArray[0], betArray[1], betArray[2], betArray[3], betArray[4]));
+                    var betsArray = line.Split(',').ToArray<string>();
+                    bets.Add(new Bet(int.Parse(betsArray[0]), int.Parse(betsArray[1]), int.Parse(betsArray[2]), double.Parse(betsArray[3]), double.Parse(betsArray[4])));
                 }
             }
             return bets;

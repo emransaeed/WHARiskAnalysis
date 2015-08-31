@@ -9,6 +9,6 @@ namespace WHARiskAnalysis.BettingDataManager
 {
     public interface IBetsDataManager
     {
-        IList<Bet> GetBets(string fileNameAndPath);
+        IList<Bet> ReadBetsFromFile(string fileNameAndPath);
     }
 }

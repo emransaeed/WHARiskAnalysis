@@ -8,7 +8,7 @@ namespace WHARiskAnalysis.Entities
 {
     public class Bet
     {
-        public Bet(int customerCode, int eventCode, int participantCode, int stake, int win)
+        public Bet(int customerCode, int eventCode, int participantCode, double stake, double win)
         {
             CustomerCode = customerCode;
             EventCode = eventCode;
@@ -20,7 +20,7 @@ namespace WHARiskAnalysis.Entities
         public int CustomerCode { get; set; }
         public int EventCode { get; set; }
         public int ParticipantCode { get; set; }
-        public int Stake { get; set; }
-        public int Win { get; set; }
+        public double Stake { get; set; }
+        public double Win { get; set; }
     }
 }

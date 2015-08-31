@@ -188,11 +188,11 @@
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.label9.ForeColor = System.Drawing.Color.Blue;
-            this.label9.Location = new System.Drawing.Point(1107, 692);
+            this.label9.Location = new System.Drawing.Point(1073, 692);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(154, 17);
+            this.label9.Size = new System.Drawing.Size(238, 17);
             this.label9.TabIndex = 16;
-            this.label9.Text = "Win more than 1000";
+            this.label9.Text = "Win more than or equal to 1000";
             // 
             // label10
             // 
